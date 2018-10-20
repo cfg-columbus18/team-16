@@ -12,7 +12,9 @@ class MatchesController < ApplicationController
 
   def find
 
-    @match_list = array.new    
+    @match_list = User.all
+
+    '''@match_list = array.new    
 
   	User.find_each do |user|
 
@@ -28,7 +30,7 @@ class MatchesController < ApplicationController
 
         # TODO interpret result - add good result to sorted array of users to be displayed
       end
-  	end
+  	end'''
 
   end
 
