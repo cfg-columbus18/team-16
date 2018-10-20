@@ -31,19 +31,23 @@
 
   <div id="people_list">
 
+  	<% @match_list.each do |match| %>
+
 		<div class="person">
 
-			<span class="left name">Person Name</span>
+			<span class="left name"><%= match.name %></span>
 			<span class=refugees>
-				<h2>0</h2>
+				<h2><%= match.refugees_sponsored %></h2>
 				Refugees Sponsored
 			</span>
 			<br/><br/><br/>
-			<div class=left>Language</div>
-			<div class=left>Country</div>
-			<div class=left>This is my bio it should be about this long, maybe a bit longer</div>
+			<div class=left><%= match.languages %></div>
+			<div class=left><%= match.country %></div>
+			<div class=left><%= match.bio %></div>
 
 		</div>
+
+		<% end %>
 
 	</div>
 </div>
