@@ -1,5 +1,16 @@
 class MatchesController < ApplicationController
+  layout "layout"
+
+  def new
+  	relationship = Match.new match_params
+  	relationship.save
+
+    redirect_to "/chats"
+  end
+
   def find
+
+   
 
   	User.find_each do |user|
 
@@ -20,5 +31,6 @@ class MatchesController < ApplicationController
   end
 
   def show
+
   end
 end
