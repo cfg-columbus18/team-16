@@ -1,6 +1,3 @@
-
-<%# app/views/chats/index.html.erb %>
-
     <div class="container-fluid">
       <div class="row">
         <div class="col-3 col-md-2 bg-dark full-height sidebar">
@@ -14,16 +11,14 @@
             <div class="chat-box py-2">
               <h4 class="username d-none mb-3"></h4>
               <% @chats.each do |chat| %>
-                <% if chat.mentee_id == @chat.sender_id || chat.mentor_id == @chat.sender_id%>
                 <div class="col-12">
                   <div class="chat bg-secondary d-inline-block text-left text-white mb-2">
                     <div class="chat-bubble">
-                      <small class="chat-username"><%= @chat.sender_id.to_s %></small>
-                      <p class="m-0 chat-message"><%= chat.message%></p>
+                      <small class="chat-username"><%= globalchat.username %></small>
+                      <p class="m-0 chat-message"><%= globalchat.message %></p>
                     </div>
                   </div>
                 </div>
-               <% end %>
               <% end %>
             </div>
             <div class="chat-text-input">
@@ -40,7 +35,7 @@
                 <% end %>
                 <div class="field position-relative">
                   <%= form.text_field :message, id: :message, class: "form-control", required: true, disabled: true %>
-                  <%= form.hidden_field :sender_id, id: :sender_id %>
+                  <%= form.hidden_field :username, id: :username %>
                 </div>
               <% end %>
             </div>

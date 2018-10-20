@@ -10,13 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_10_20_143146) do
+=======
 ActiveRecord::Schema.define(version: 2018_10_20_114354) do
+>>>>>>> d90a7bb14439718e87e456c4809aa205ed49877f
 
   create_table "chats", force: :cascade do |t|
     t.text "message"
     t.string "username"
     t.string "mentor_id"
     t.string "mentee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "sender_id"
+  end
+
+  create_table "global_chats", force: :cascade do |t|
+    t.text "message"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,11 +50,6 @@ ActiveRecord::Schema.define(version: 2018_10_20_114354) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
@@ -61,6 +68,11 @@ ActiveRecord::Schema.define(version: 2018_10_20_114354) do
     t.integer "prefer_whatsapp"
     t.integer "prefer_viber"
     t.integer "refugees_sponsored"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.integer "is_mentor"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
