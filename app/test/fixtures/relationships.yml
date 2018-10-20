@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_mentor: 1
+  id_mentee: 1
+  b_valid: 1
+
+two:
+  id_mentor: 1
+  id_mentee: 1
+  b_valid: 1
