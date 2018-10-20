@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   #has_many :message
   has_many :conversations, foreign_key: :id_sender
-  has_many :chats, foreign_key: :mentor_id, foreign_key: :mentee_id
+  has_many :chats, foreign_key: :mentor_id
 
 
   def name
