@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-resources :chats
-root 'chats#index'
+
   
   #devise_for :users
 #<<<<<<< HEAD
@@ -13,6 +12,7 @@ root 'chats#index'
         sessions: 'users/sessions',
         registrations: 'users/registrations',
   }
-
+resources :chats
+root 'chats#index'
 
 end
