@@ -1,6 +1,6 @@
 <html>
 
-<style>
+<style type="text/css">
 .nav_elements {
 	text-align: center;
 }
@@ -8,9 +8,9 @@
 	text-align: center;
   list-style-type: none;
   overflow: hidden;
-  font-size: 30px;
 }
 li {
+	height: 100%;
   float: left;
   display: block;
   text-align: center;
@@ -27,7 +27,7 @@ li:hover {
 	display: inline-block;
 }
 nav {
-	font-size:30;
+	font-size:30px;
 	font-family: 'GothamMedium', sans-serif;
 }
 </style>
@@ -35,7 +35,9 @@ nav {
 <body style="margin:0">
 
 <nav style="font-size:30">
-	<a><img src="grsi_logo.png" alt="GRSI logo" width="246" height="70"></a>
+
+		<%= image_tag("grsi_logo.png", :alt => "GRSI Logo", :width=>"246", :height=>"70") %>
+
 	
 	<td id="links">
 		<div id="linksDiv">
