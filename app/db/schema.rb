@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_20_031709) do
+ActiveRecord::Schema.define(version: 2018_10_20_070302) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "id_relationship"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 2018_10_20_031709) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "bio"
+    t.string "phone"
+    t.string "city"
+    t.string "jurisdiction"
+    t.string "country"
+    t.string "time_zone"
+    t.string "languages"
+    t.integer "prefer_phone"
+    t.integer "prefer_email"
+    t.integer "prefer_skype"
+    t.integer "prefer_google_hangout"
+    t.integer "prefer_facebook"
+    t.integer "prefer_whatsapp"
+    t.integer "prefer_viber"
+    t.integer "refugees_sponsored"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
