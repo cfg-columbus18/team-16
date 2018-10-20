@@ -33,7 +33,7 @@
 
   	<% @match_list.each do |match| %>
 
-		<div class="person">
+		<a href=/chats><div class="person">
 
 			<span class="left name"><%= match.name %></span>
 			<span class=refugees>
@@ -45,7 +45,7 @@
 			<div class=left><%= match.country %></div>
 			<div class=left><%= match.bio %></div>
 
-		</div>
+		</div></a>
 
 		<% end %>
 
