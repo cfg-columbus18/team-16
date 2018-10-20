@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'about/show'
   # Chat is visible at /chats
   resources :chats
 

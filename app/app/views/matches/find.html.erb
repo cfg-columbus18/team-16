@@ -1,2 +1,53 @@
-<h1>Matches#find</h1>
-<p>Find me in app/views/matches/find.html.erb</p>
+<style>
+
+#people_list {
+  margin: 100px;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+	width: 50%;
+}
+.person {
+  border: 1px solid rgb(120,120,120);
+  border-radius: 20px;
+  background: rgb(220,220,220);
+  padding: 20px;
+}
+.left {
+	text-align: left;
+}
+.refugees {
+	right: 0px;
+	text-align: center;
+	float: right;
+}
+.name {
+	font-size: 50px;
+	float: left;
+}
+</style>
+
+<div style="text-align: center;">
+
+  <div id="people_list">
+
+  	<% @match_list.each do |match| %>
+
+		<div class="person">
+
+			<span class="left name"><%= match.name %></span>
+			<span class=refugees>
+				<h2><%= match.refugees_sponsored %></h2>
+				Refugees Sponsored
+			</span>
+			<br/><br/><br/>
+			<div class=left><%= match.languages %></div>
+			<div class=left><%= match.country %></div>
+			<div class=left><%= match.bio %></div>
+
+		</div>
+
+		<% end %>
+
+	</div>
+</div>

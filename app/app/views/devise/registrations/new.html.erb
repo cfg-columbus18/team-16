@@ -37,85 +37,91 @@
       </div>
 
       <div class="field">
+        First and last name:
+        <input type="text" name="user[name]" value="">
+      </div>
+
+      <div class="field">
         Describe yourself and your experience:
-        <input type="text" name="bio" value="">
+        <input type="text" name="user[bio]" value="">
       </div>
 
       <div class="field">
         How many refugees have you fully sponsored?
-        <input type="text" name="refugees_sponsored" value="">
+        <input type="text" name="user[refugees_sponsored]" value="">
       </div>
 
       <div class="field">
         Are you a mentor?
-        <input type="checkbox" name="is_mentor" value="">
+        <%= f.check_box :is_mentor %>
+        
       </div>
 
       <div class="field">
         What time zone are you in?
-        <input type="text" name="time_zone" value="">
+        <input type="text" name="user[time_zone]" value="">
       </div>
 
       <div class="field">
         What country are you in?
-        <input type="text" name="country" value="">
+        <input type="text" name="user[country]" value="">
       </div>
 
       <div class="field">
         What state/province are you in?
-        <input type="text" name="jurisdiction" value="">
+        <input type="text" name="user[jurisdiction]" value="">
       </div>
 
       <div class="field">
         What city are you in?
-        <input type="text" name="city" value="">
+        <input type="text" name="user[city]" value="">
       </div>
 
       <div class="field">
         What is your phone number?
-        <input type="text" name="phone" value="">
+        <input type="text" name="user[phone]" value="">
       </div>
       
       <div class="field">
         What languages do you speak fluently?
-        <input type="text" name="languages" value="">
+        <input type="text" name="user[languages]" value="">
       </div>
 
       Which of these communication methods work for you:
 
       <div class="field">
         Calls/Texts:
-        <input type="checkbox" name="prefer_phone" value="">
+        <%= f.check_box :prefer_phone %>
       </div>
 
       <div class="field">
         Email:
-        <input type="checkbox" name="prefer_email" value="">
+        <%= f.check_box :prefer_email %>
       </div>
 
       <div class="field">
         Skype:
-        <input type="checkbox" name="prefer_skype" value="">
+        <%= f.check_box :prefer_skype %>
       </div>
         
       <div class="field">
         Google Hangouts:
-        <input type="checkbox" name="prefer_google_hangout" value="">
+        <%= f.check_box :prefer_google_hangout %>
       </div>
 
       <div class="field">
         Facebook:
-        <input type="checkbox" name="prefer_facebook" value="">
+        <%= f.check_box :prefer_facebook %>
       </div>
       
       <div class="field">
         Whatsapp:
-        <input type="checkbox" name="prefer_whatsapp" value="">
+        <%= f.check_box :prefer_whatsapp %>
       </div>
       
       <div class="field">
         Viber:
-        <input type="checkbox" name="prefer_viber" value="">
+        <%= f.check_box :prefer_viber %>
       </div>
       
 

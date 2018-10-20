@@ -7,9 +7,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
   layout "layout"
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource
   # def create
@@ -61,4 +61,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  # override decise defaults
+  def sign_up_params
+    params.require(:user).permit(:email, :password, :encrypted_password, :name, :refugees_sponsored, :password_confirmation, :bio, :is_mentor, :time_zone, :country, :jurisdiction, :city, :phone, :languages, :prefer_phone, :prefer_email, :prefer_facebook)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:email, :password, :encrypted_password, :name, :refugees_sponsored, :password_confirmation, :bio, :is_mentor, :time_zone, :country, :jurisdiction, :city, :phone, :languages, :prefer_phone, :prefer_email, :prefer_facebook)
+  end
 end
