@@ -1,8 +1,8 @@
 class Chat < ApplicationRecord
   after_create :notify_pusher, on: :create
-  
 
-  scope :between, -> (mentor_id,mentee_id) do
+
+  '''scope :between, -> (mentor_id,mentee_id) do
   	where (mentor_id: mentor_id, mentee_id: mentee_id). or (
   	where (mentor_id: mentee_id, mentee_id: mentor_id)
   	)
@@ -13,7 +13,7 @@ class Chat < ApplicationRecord
   	return chat if chat.present?
 
   	create(mentor_id: mentor_id, mentee_id: mentee_id)
-  end
+  end'''
 
 
 
