@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_20_044926) do
-
-  create_table "conversations", force: :cascade do |t|
-    t.integer "recipient_id"
-    t.integer "sender_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
-    t.index ["sender_id"], name: "index_conversations_on_sender_id"
-  end
+ActiveRecord::Schema.define(version: 2018_10_20_031709) do
 
   create_table "messages", force: :cascade do |t|
     t.integer "id_relationship"
