@@ -4,9 +4,11 @@
 	text-align: center;
 }
 #links {
-	text-align: center;
+	text-align: right;
   list-style-type: none;
   overflow: hidden;
+  display: inline-block;
+  float:right;
 }
 li {
 	height: 100%;
@@ -15,6 +17,7 @@ li {
   text-align: center;
   padding: 14px 16px;
   cursor: pointer;
+  color: white;
 }
 li:hover {
   background-color: rgb(90,90,90);
@@ -44,8 +47,9 @@ nav {
 	
 	<td id="links">
 		<div id="linksDiv">
-			<li><a>Resources</a></li>
-			<li><a>About Us</a></li>
+			<li><a href=/about>About Us</a></li>
+			<li><a href=/chat>Chat</a></li>
+			<li><a href=/users/login>Sign In</a></li>
 		</div>
 	</td>
 
