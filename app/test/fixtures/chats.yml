@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  username: MyString
+  mentor_id: MyString
+  mentee_id: MyString
+
+two:
+  message: MyText
+  username: MyString
+  mentor_id: MyString
+  mentee_id: MyString

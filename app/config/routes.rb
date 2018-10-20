@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+resources :chats
+root 'chats#index'
+  
+  #devise_for :users
 #<<<<<<< HEAD
   #devise_for :users
   get '/', to: "welcome#show"
@@ -9,4 +13,6 @@ Rails.application.routes.draw do
         sessions: 'users/sessions',
         registrations: 'users/registrations',
   }
+
+
 end
