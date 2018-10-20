@@ -17,7 +17,6 @@ li {
   text-align: center;
   padding: 14px 16px;
   cursor: pointer;
-  color: white;
 }
 li:hover {
   background-color: rgb(90,90,90);
@@ -40,6 +39,7 @@ nav {
 }
 </style>
 
+
 <nav style="font-size:30">
 
 	<%= image_tag("grsi_logo.png", :alt=>"GRSI Logo", :width=>"246", :height=>"70", :style=>"vertical-align: top" ) %>
@@ -47,8 +47,9 @@ nav {
 	
 	<td id="links">
 		<div id="linksDiv">
+			<li>Connexion</li>
 			<li><a href=/about>About Us</a></li>
-			<li><a href=/chat>Chat</a></li>
+			<li><a href=/chats>Chat</a></li>
 			<li><a href=/users/login>Sign In</a></li>
 		</div>
 	</td>

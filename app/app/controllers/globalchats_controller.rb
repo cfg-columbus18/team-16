@@ -1,15 +1,15 @@
 class GlobalchatsController < ApplicationController
   def index
-        @chats = Globalchat.all
-        @chat = Globalchat.new
+        @chats = GlobalChat.all
+        @chat = GlobalChat.new
       end
 
       def new
-        @chat = Globalchat.new
+        @chat = GlobalChat.new
       end
 
       def create
-        @chat = Globalchat.new(Globalchat_params)
+        @chat = GlobalChat.new(chat_params)
         respond_to do |format|
           if @chat.save
             format.html { redirect_to @chat, notice: 'Message was successfully posted.' }
@@ -23,6 +23,6 @@ class GlobalchatsController < ApplicationController
 
       private
         def Globalchat_params
-          params.require(:globalchat).permit(:username, :message)
+          params.require(:chat).permit(:username, :message)
         end
 end
