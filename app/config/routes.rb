@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Chat is visible at /chats
   resources :chats
 
-  get '/globalchat', to: "global_chats#index"
+  get '/global_chats', to: "globalchats#index"
   resources :global_chats
   
   get '/matches', to: "matches#find"
