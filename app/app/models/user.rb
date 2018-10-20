@@ -3,8 +3,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :message
+  #has_many :message
   has_many :conversations, foreign_key: :id_sender
+  has_many :chats, foreign_key: :mentor_id, foreign_key: :mentee_id
+
 
   def name
   email.split('@')[0]
