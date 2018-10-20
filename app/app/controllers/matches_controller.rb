@@ -1,3 +1,5 @@
+require_relative "ranking"
+
 class MatchesController < ApplicationController
   layout "layout"
 
@@ -10,7 +12,7 @@ class MatchesController < ApplicationController
 
   def find
 
-   
+    @match_list = array.new    
 
   	User.find_each do |user|
 
@@ -20,9 +22,9 @@ class MatchesController < ApplicationController
         mentor = user
         mentee = current_user
 
-
         # TODO update this to match score function
-        match_score = score(mentor, mentee)
+        match_score = ranking(mentor, mentee)
+        @match_list.push(match_score)
 
         # TODO interpret result - add good result to sorted array of users to be displayed
       end
