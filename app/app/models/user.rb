@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :chats, foreign_key: :mentor_id, foreign_key: :mentee_id
 
 
-  def name
-    email.split('@')[0]
-  end
+  #def name
+  #  email.split('@')[0]
+  #end
 end

@@ -76,8 +76,3 @@ def ranking (user_mentor, user_mentee)
 	return match_score
 	  
 end
-
-
-#aranking = Ranks.new
-#puts aranking.ranking(is_mentor=0, name=5, bio=1, phone=10, email=10, city=10, jurisdiction=10, country=10, time_zone=10, languages=5, prefer_phone=9, prefer_email=8, prefer_skype=3, prefer_google_hangout=2, prefer_facebook=3, prefer_whatsapp=2, prefer_viber=4, refugees_sponsored=3,long_term_goal=2)
-puts ranking(user_mentor1, user_mentee1)
