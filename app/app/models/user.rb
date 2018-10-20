@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :message
   has_many :conversations, foreign_key: :id_sender
+  has_many :match
 
   def name
-  email.split('@')[0]
-end
+    email.split('@')[0]
+  end
 end

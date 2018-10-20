@@ -1,18 +1,33 @@
 Rails.application.routes.draw do
-resources :chats
-root 'chats#index'
+
+  # Chat is visible at /chats
+  resources :chats
   
-  #devise_for :users
-#<<<<<<< HEAD
-  #devise_for :users
-  get '/', to: "welcome#show"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "home#index"
+  get '/matches', to: "matches#find"
+
+  get '/user', to: "user#show"
+
+  get '/', to: "welcome#index"
 
   devise_for :users, controllers: {
         sessions: 'users/sessions',
         registrations: 'users/registrations',
   }
 
+  get '/about', to: "about#show"
 
+  #Login page
+  # /users/login
+
+  #Profile page
+  # /user
+
+  #Chat page
+  # /chat
+
+  #Match view page
+  # /matches
+
+  #About page
+  # /about
 end
