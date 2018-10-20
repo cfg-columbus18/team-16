@@ -14,14 +14,16 @@
             <div class="chat-box py-2">
               <h4 class="username d-none mb-3"></h4>
               <% @chats.each do |chat| %>
+                <% if chat.mentee_id == current_user.id || chat.mentor_id == current_user.id %>
                 <div class="col-12">
                   <div class="chat bg-secondary d-inline-block text-left text-white mb-2">
                     <div class="chat-bubble">
                       <small class="chat-username"><%= chat.username %></small>
-                      <p class="m-0 chat-message"><%= chat.message %></p>
+                      <p class="m-0 chat-message"><%= chat.message%></p>
                     </div>
                   </div>
                 </div>
+               <% end %>
               <% end %>
             </div>
             <div class="chat-text-input">
